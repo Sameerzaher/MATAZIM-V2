@@ -26,6 +26,9 @@ const Navbar = () => {
                 <NavLink to="/HomeScreen" activeStyle>
                     דף הבית
                 </NavLink>
+                <NavLink to="/Signin" activeStyle>
+                    התחבר
+                </NavLink>
             </NavMenu> 
            </Nav> 
         </>
