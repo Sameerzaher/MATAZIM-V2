@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useCookies } from 'react-cookie';
+
 import {
   Nav,
   NavLogo,
@@ -8,7 +10,17 @@ import {
   NavBtn,
   NavBtnLink,
 } from "./NavbarElements";
+
+//check if the user logged in
 const Navbar = () => {
+    
+    const[token, setToken] = useCookies(['mr-token']);
+    const[navBar, setNavBar ] = useState('התחבר');
+   
+   useEffect(() =>{
+    setNavBar('התנתק')
+}, [token])
+  
     return (
         <>
            <Nav>
@@ -26,9 +38,14 @@ const Navbar = () => {
                 <NavLink to="/HomeScreen" activeStyle>
                     דף הבית
                 </NavLink>
-                <NavLink to="/Signin" activeStyle>
-                    התחבר
+               
+                <NavLink  to="/Signin" activeStyle>
+                {navBar}
                 </NavLink>
+                {/* <NavLink to="/Signin" activeStyle>
+                    התנתק
+                </NavLink> */}
+                
             </NavMenu> 
            </Nav> 
         </>
