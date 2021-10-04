@@ -7,28 +7,17 @@ import ProjectsScreen from './pages/ProjectsScreen';
 import Signin from './pages/Signin'; 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useCookies } from 'react-cookie';
-//import SignUp from './pages/signup';
 
 
 
 function App() {
   const [token, setToken, deleteToken] = useCookies(['mr-token']);
 
-  
-  
-  useEffect ( () => {
-    if(!token['mr-token']) console.log("no token");
-    else console.log(token);
-    //window.location.href = '/'
-  }, [token])
 
-  const logoutUser = () => {
-    console.log("inside logoutUser");
-    deleteToken(['mr-token']);
-  }
   return (
+
     <Router>
-     <button onClick={logoutUser}> התנתק!</button>
+     
       <Navbar />
       <Switch>
         <Route path="/HomepageScreen" exact component={HomepageScreen} />
