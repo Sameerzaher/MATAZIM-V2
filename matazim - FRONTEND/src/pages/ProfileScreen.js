@@ -39,7 +39,7 @@ class ProfileScreen extends React.Component {
        
        
 
-      <Form.Group controlId="formCategory2">
+      <Form.Group controlId="formCategory1">
         <Form.Label>Username</Form.Label>
         <Form.Control type="text" defaultValue={this.state.username}/>
       
@@ -50,7 +50,18 @@ class ProfileScreen extends React.Component {
       
       </Form.Group>
      
-      
+      <Form.Group controlId="formCategory3">
+        <Form.Label>First Name</Form.Label>
+        <Form.Control type="text" name="firstname" onChange={this.changefirstname}/>
+        </Form.Group>
+        <Form.Group controlId="formCategory4">
+        <Form.Label>Last Name</Form.Label>
+        <Form.Control type="text" name="lastname" onChange={this.changelastname}/>
+        </Form.Group>
+        <Form.Group controlId="formCategory5">
+        <Form.Label>Skills</Form.Label>
+        <Form.Control type="text" name="skills" onChange={this.changeskills}/>
+        </Form.Group>
       <Button variant="primary" onClick={this.UpdateProfileHandler}>Update Profile</Button>
       </Form>
        </Col>
