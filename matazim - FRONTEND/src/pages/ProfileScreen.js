@@ -50,10 +50,7 @@ class ProfileScreen extends React.Component {
       
       </Form.Group>
      
-      <Form.Group controlId="formCategory4">
-        <Form.Label>Profile Image</Form.Label>
-        <Form.Control type="file" name="profileImage" onChange={this.changeProfileImage}/>
-        </Form.Group>
+      
       <Button variant="primary" onClick={this.UpdateProfileHandler}>Update Profile</Button>
       </Form>
        </Col>
