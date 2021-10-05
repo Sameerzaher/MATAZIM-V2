@@ -32,6 +32,9 @@ const logoutUser = () => {
             </NavLogo>
             <Bars />
             <NavMenu>
+            <NavLink to="/ProfileScreen" activeStyle>
+                    פרופייל
+                </NavLink>
             <NavLink to="/ProjectsScreen" activeStyle>
                     פרויקטים
                 </NavLink> 
